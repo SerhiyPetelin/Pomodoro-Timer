@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <div class="container">
+    <!-- <div class="container">
         <h1 class="title">Pomodoro Timer</h1>
         <p class="timer" id="timer">25:00</p>
         <div class="button-wrapper">
@@ -17,7 +17,35 @@
             <button id="stop">Stop</button>
             <button id="reset">Reset</button>
         </div>
-    </div>
+    </div> -->
+    <header class="header">
+        <nav class="navigation">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Calendar</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="pomo-timer">
+            <div class="pomo-timer__tab-menu">
+                <button id="pomodoro">Pomodoro</button>
+                <button id="short-break">Short break</button>
+                <button id="long-break">Long break</button>
+            </div>
+            <div class="timer-screen">
+                <p class="timer" id="timer">25:00</p>
+            </div>
+            <div class="timer-control-btn">
+                <button id="start"><img src="assets/img/play_arrow_FILL0_wght400_GRAD0_opsz24.svg" alt="Play button"></button>
+                <button id="stop"><img src="assets/img/stop_FILL0_wght400_GRAD0_opsz24.svg" alt="Stop button"></button>
+                <button id="reset"><img src="assets/img/replay_FILL0_wght400_GRAD0_opsz24.svg" alt="Reset button"></button>
+            </div>
+        </section>
+    </main>
 
 </body>
 
