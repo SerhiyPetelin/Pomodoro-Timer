@@ -142,6 +142,17 @@ body.page-loaded #feh-pomodoro-overlay {
     fill: #5c5c5cd1;
 }
 
+body.settings-active #feh-timer-settings {
+    opacity: 1;
+    visibility: visible;
+}
+
+body.settings-active #feh-timer-sessions,
+body.settings-active #feh-timer-buttons {
+    opacity: 0;
+    visibility: hidden;
+}
+
 /* Completed sessions */
 
 #feh-timer-sessions {

@@ -48,6 +48,27 @@
         fehBody.classList.add('timer-paused');
     });
 
+    // Settings
+    const btnToggleSettings = document.getElementById('feh-toggle-settings');
+    const btnCloseSettings = document.getElementById('feh-close-settings');
+
+    function setBodySettings() {
+        fehBody.classList.contains('settings-active') ? fehBody.classList.remove('settings-active') : fehBody.classList.add('settings-active');
+    }
+
+    function toggleSettings() {
+        if(event.type === 'click') {
+            setBodySettings();
+        }
+        else if((event.type === 'keydown' && event.keyCode ===27)) {
+            fehBody.classList.remove('settings-active');
+        }
+    }
+
+    btnToggleSettings.addEventListener('click', toggleSettings);
+    btnCloseSettings.addEventListener('click', toggleSettings);
+    document.addEventListener('keydown', toggleSettings);
+
     // Update timer
     function updateTimer() {
         if (!isPaused) {
