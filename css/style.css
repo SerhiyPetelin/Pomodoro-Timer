@@ -37,9 +37,7 @@ body {
     transition: all 0.6s ease-in-out;
 }
 
-/** 
-*Pomodoro
-*/
+/** Pomodoro */
 
 #feh-pomodoro {
     position: relative;
@@ -55,9 +53,8 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.64)
 }
 
-/** 
-*Overlay
-*/
+/** Overlay */
+
 #feh-pomodoro-overlay {
     background: #fff;
     width: 100%;
@@ -83,9 +80,8 @@ body.page-loaded #feh-pomodoro-overlay {
     height: 150px;
 }
 
-/**
-*Generic button + toggle button
-*/
+/** Generic button + toggle button */
+
 .btn-icon {
     border-radius: 20px;
     position: absolute;
@@ -106,9 +102,8 @@ body.page-loaded #feh-pomodoro-overlay {
     height: 50px;
 }
 
-/**
-*Progress
-*/
+/** Progress */
+
 #feh-timer-progress {
     display: flex;
     justify-content: center;
@@ -145,4 +140,30 @@ body.page-loaded #feh-pomodoro-overlay {
     opacity: 0;
     transition: all 0.3s ease-in-out;
     fill: #5c5c5cd1;
+}
+
+/* Completed sessions */
+
+#feh-timer-sessions {
+    border-radius: 50px;
+    background: #fff;
+    display: flex;
+    color: #5c5c5cb8;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+}
+
+#feh-timer-sessions {
+    padding: 12px;
+}
+
+p#feh-completed-label {
+    width: 80%;
+    text-align: center;
+}
+
+p#feh-completed-sessions {
+    font-weight: bold;
+    color: #222;
+    font-size: 20px;
 }
