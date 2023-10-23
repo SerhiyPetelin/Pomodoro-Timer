@@ -4,6 +4,7 @@
     const workDurationInput = document.getElementById('work-duration');
     const restDurationInput = document.getElementById('rest-duration');
     const timerTime = document.getElementById('feh-timer-time');
+    const circleProgress = document.querySelector('.circle-progress');
 
     let workDuration = parseInt(workDurationInput.value) * 60;
     let restDuration = parseInt(restDurationInput.value) * 60;
@@ -38,6 +39,15 @@
         }
     });
 
+    // Pause button
+    const pauseBtn = document.getElementById('pause-btn');
+    pauseBtn.addEventListener('click', () => {
+        isPaused = true;
+
+        fehBody.classList.remove('timer-running');
+        fehBody.classList.add('timer-paused');
+    });
+
     // Update timer
     function updateTimer() {
         if (!isPaused) {
@@ -63,4 +73,24 @@
         }
 
     }
+
+    // Update progress
+    function updateProgress() {
+        const radius = 45;
+        const circumference = 2 * Math.PI * radius;
+
+        const totalDuration = isWorking ? workDuration : restDuration;
+        const dashOffset = circumference * remainingTime / totalDuration;
+
+        circleProgress.style.strokeDashoffset = dashOffset;
+        timerTime.textContent = formatTime(remainingTime);
+    }
+
+    function formatTime(seconds) {
+        const minutes = Math.floor(seconds / 60);
+        const remainingSeconds = seconds % 60;
+        return `${minutes.toString().padStart(2, '0')}:${remainingSeconds.toString().padStart(2, '0')}`;
+    }
+
+    updateProgress();
 })();
