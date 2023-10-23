@@ -5,50 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pomodoro Timer</title>
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <!-- <div class="container">
-        <h1 class="title">Pomodoro Timer</h1>
-        <p class="timer" id="timer">25:00</p>
-        <div class="button-wrapper">
-            <button id="start">Start</button>
-            <button id="stop">Stop</button>
-            <button id="reset">Reset</button>
-        </div>
-    </div> -->
-    <header class="header">
-        <nav class="navigation">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Calendar</a></li>
-                <li><a href="#">Settings</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Logout</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section class="pomo-timer">
-            <div class="pomo-timer__tab-menu">
-                <button id="pomodoro">Pomodoro</button>
-                <button id="short-break">Short break</button>
-                <button id="long-break">Long break</button>
-            </div>
-            <div class="timer-screen">
-                <p class="timer" id="timer">25:00</p>
-            </div>
-            <div class="timer-control-btn">
-                <button id="reset"><img src="assets/img/replay_FILL0_wght400_GRAD0_opsz24.svg"
-                        alt="Reset button"></button>
-                <button id="start"><img src="assets/img/play_arrow_FILL0_wght400_GRAD0_opsz24.svg"
-                        alt="Play button"></button>
-                <button id="stop"><img src="assets/img/stop_FILL0_wght400_GRAD0_opsz24.svg" alt="Stop button"></button>
-            </div>
-        </section>
-    </main>
+       <div id="vista-bg"></div>
 
+       <div id="feh-pomodoro">
+        <div id="feh-pomodoro-overlay"></div>
+        <span class="btn-icon" id="feh-toggle-settings"><i class="fa fa-cog"></i></span>
+        <div id="feh-timer-progress"></div>
+        <div id="feh-timer-sessions"></div>
+        <div id="feh-timer-functions">
+            <div id="feh-timer-settings"></div>
+            <div id="feh-timer-buttons"></div>
+        </div>
+       </div>
+
+       <script src="main.js"></script>
 </body>
 
 </html>
