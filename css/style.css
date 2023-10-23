@@ -46,3 +46,31 @@ body {
     -webkit-backdrop-filter: blur(7.7px);
     border: 1px solid rgba(255, 255, 255, 0.64)
 }
+
+/** 
+*Overlay
+*/
+#feh-pomodoro-overlay {
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 20px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+}
+
+body.page-loaded #feh-pomodoro-overlay {
+    opacity: 0;
+    visibility: hidden;
+}
+
+#feh-pomodoro-overlay img {
+    width: 150px;
+    height: 150px;
+}
