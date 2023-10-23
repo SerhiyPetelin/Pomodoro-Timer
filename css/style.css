@@ -27,7 +27,7 @@ body {
 }
 
 #vista-bg {
-    background-image: url(https://www.frontendhero.dev/wp-content/uploads/2023/05/vista-bg-scaled.jpg);
+    background-image: url(https://i.pinimg.com/originals/35/fd/f7/35fdf7baa41ec06a27ddf15e419858f3.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -35,6 +35,18 @@ body {
     height: 100%;
     position: absolute;
     transition: all 0.6s ease-in-out;
+}
+
+body.rest-mode #vista-bg {
+    filter: blur(5px) grayscale(0.6) brightness(0.5);
+}
+
+body.rest-mode .circle-progress {
+    stroke: #fd525385;
+}
+
+body.timer-running .circle-progress {
+    transition: all 1s linear;
 }
 
 /** Pomodoro */
@@ -275,4 +287,25 @@ p#feh-completed-sessions {
     font-size: 22px;
     color: #fff;
     border-radius: 100px;
+}
+
+body.timer-running #start-btn {
+    opacity: 0;
+    visibility: hidden;
+}
+
+body.timer-paused #start-btn {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Timer inner text */
+body.timer-paused:not(.rest-mode) #feh-timer-pause,
+body.rest-mode #feh-timer-rest,
+body.rest-mode.timer-paused #feh-timer-pause {
+    opacity: 1;
+}
+
+body.rest-mode.timer-paused #feh-timer-rest {
+    opacity: 0;
 }

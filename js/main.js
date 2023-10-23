@@ -13,6 +13,9 @@
     let isWorking = true;
     let intervalId;
 
+    const completedSessionsElement = document.getElementById('feh-completed-sessions');
+    let completedSessions = 0;
+
     // Page loaded
 
     window.addEventListener('load', () => {
@@ -88,6 +91,11 @@
 
     // Update timer
     function updateTimer() {
+
+        let playAlarm;
+        const workFinished = new Audio("/assets/sounds/alert-work.mp3");
+        const restFinished = new Audio("/assets/sounds/alert-short-break.mp3");
+
         if (!isPaused) {
             remainingTime--;
 
@@ -98,15 +106,23 @@
                 if(!isWorking) {
                     fehBody.classList.add('rest-mode');
                     fehBody.classList.remove('timer-running');
+
+                    completedSessions++;
+                    completedSessionsElement.textContent = completedSessions;
                 }
                 else {
                     fehBody.classList.remove('rest-mode');
                     fehBody.classList.remove('timer-running');
                 }
 
-                isPaused = false;
+                playAlarm = isWorking ? restFinished : workFinished;
+                playAlarm.play();
+
+                isPaused = true;
                 fehBody.classList.remove('timer-work-active');
             }
+            document.title = timerTime.textContent = formatTime(remainingTime);
+
             updateProgress();
         }
 
