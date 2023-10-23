@@ -179,8 +179,8 @@ p#feh-completed-sessions {
 
 #feh-timer-settings {
     transition: all 0.3s ease-in-out;
-    /* opacity: 0;
-    visibility: hidden; */
+    opacity: 0;
+    visibility: hidden;
 }
 
 #feh-close-settings {
