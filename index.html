@@ -31,8 +31,23 @@
             <p id="feh-completed-sessions">0</p>
         </div>
         <div id="feh-timer-functions">
-            <div id="feh-timer-settings"></div>
-            <div id="feh-timer-buttons"></div>
+            <div id="feh-timer-settings">
+                <span class="btn-icon" id="feh-close-settings"><i class="fa fa-times"></i></span>
+                <form id="feh-timer-form">
+                    <p class="feh-timer-line">
+                        <label for="work-duration">Pomodoro: </label>
+                        <input type="number" id="work-duration" value="25" min="1">
+                    </p>
+                    <p class="feh-timer-line">
+                        <label for="work-duration">Rest: </label>
+                        <input type="number" id="rest-duration" value="5" min="1">
+                    </p>
+                </form>
+            </div>
+            <div id="feh-timer-buttons">
+                <button id="pause-btn"><i class="fa fa-pause"></i></button>
+                <button id="start-btn"><i class="fa fa-play"></i></button>
+            </div>
         </div>
     </div>
 
