@@ -27,7 +27,7 @@ body {
 }
 
 #vista-bg {
-    background-image: url(https://i.pinimg.com/originals/35/fd/f7/35fdf7baa41ec06a27ddf15e419858f3.jpg);
+    background-image: url(/assets/img/timer-bgr.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
