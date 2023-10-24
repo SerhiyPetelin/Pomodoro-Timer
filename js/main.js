@@ -93,8 +93,8 @@
     function updateTimer() {
 
         let playAlarm;
-        const workFinished = new Audio("/assets/sounds/alert-work.mp3");
-        const restFinished = new Audio("/assets/sounds/alert-short-break.mp3");
+        const workFinished = new Audio("assets/sounds/alert-work.mp3");
+        const restFinished = new Audio("assets/sounds/alert-short-break.mp3");
 
         if (!isPaused) {
             remainingTime--;
